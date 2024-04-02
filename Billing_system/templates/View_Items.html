@@ -1,0 +1,25 @@
+
+<table  class="table" width="1000" border="1" align="center">
+  <tr>
+    <th scope="row">sNO</th>
+     <th>Name</th>
+    <th>Price</th>
+    <th>Description</th>
+   
+
+    
+  </tr>
+    {% for i in items %}
+  <tr>
+    <td>{{ forloop.counter }}</td>
+    <td>{{ i.name }}</td>
+    <td>{{ i.price }}</td>
+    <td>{{ i.description }}</td>
+  <td><a href="/update_items/{{ i.id }}">Edit</a></td>
+    <td><a href="/delete_added_items/{{ i.id }}">Delete</a></td>
+
+
+  </tr>
+{% endfor %}
+</table>
+

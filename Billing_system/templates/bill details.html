@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bill Details</title>
+</head>
+<body>
+    <h1>Bill Details</h1>
+    <p>Bill ID:{{ bill.id }}</p>
+    <p>Total Cost:${{ bill.total_cost }}</p>
+<ul>
+    {% for item in bill.items.all %}
+    <li>{{ item.name }} - ${{ item.price }}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>
